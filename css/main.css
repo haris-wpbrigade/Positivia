@@ -286,3 +286,54 @@ body {
 .nav-bar .nav-list .list-item .submenu li:hover a{
   color: #ff9133;
 }
+
+.hero-banner{
+  background-color: #333333;
+  background: url(../img/banner.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 453px;
+  padding: 126px 0;
+}
+
+.hero-banner .container{
+  display: flex;
+  align-items: center;
+  padding-left: 103px;
+}
+
+.hero-content{
+  font-family: "HelveticaNeue";
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+
+.hero-content .first-txt{
+  font-size: 22px;
+  letter-spacing: -1.4px;
+  color: #fd7605;
+}
+
+.hero-content .first-txt span{
+  color: #3d4e5a;
+}
+
+.hero-content .second-txt{
+  color: #3d4e5a;
+  font-size: 34px;
+  line-height: 30px;
+}
+
+.hero-content .second-txt span{
+  color: #fd7605;
+}
+
+.hero-content .third-txt{
+  font-size: 34px;
+  color: #fd7605;
+}
+
+.hero-content .third-txt span{
+  font-weight: 400;
+  font-size: 22px;
+}
