@@ -17,41 +17,40 @@
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica.woff2') format('woff2'),
-      url('../fonts/Helvetica.woff') format('woff');
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica.woff2") format("woff2"),
+    url("../fonts/Helvetica.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica-Light.woff2') format('woff2'),
-      url('../fonts/Helvetica-Light.woff') format('woff');
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Light.woff2") format("woff2"),
+    url("../fonts/Helvetica-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
-      url('../fonts/Helvetica-Bold.woff') format('woff');
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Bold.woff2") format("woff2"),
+    url("../fonts/Helvetica-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/Helvetica-Oblique.woff2') format('woff2'),
-      url('../fonts/Helvetica-Oblique.woff') format('woff');
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Oblique.woff2") format("woff2"),
+    url("../fonts/Helvetica-Oblique.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
-
 
 * {
   margin: 0;
@@ -59,12 +58,231 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Helvetica";
+  background-color: #ffffff;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 990px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.top-bar {
+  background: #3d4e5a;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 15px;
+}
+
+.top-bar .left-col,
+.top-bar .right-col,
+.top-bar .right-col a {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .left-col .CTA {
+  background-color: #ff7500;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 12px;
+  line-height: 11px;
+  font-weight: 700;
+  padding: 8px 13px 8px 9px;
+}
+
+.top-bar .left-col a:nth-child(2) {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 11px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.top-bar .left-col .lang {
+  display: table;
+  color: #fff;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-left: 1px;
+  border-right: 1px solid white;
+  padding-right: 11px;
+}
+
+.top-bar .left-col .lang .first-letter {
+  font-size: 12px;
+}
+.top-bar .left-col .lang .second-letter {
+  font-size: 14px;
+}
+.top-bar .left-col .lang .third-letter {
+  font-size: 15px;
+}
+
+.top-bar .left-col .time {
+  color: #fff;
+  font-size: 12.21px;
+  margin-left: 10px;
+}
+
+.top-bar .right-col a {
+  padding: 0 13px;
+  position: relative;
+  border-left: 1px solid #7b8b96;
+}
+
+.top-bar .right-col a span {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.top-bar .right-col a .top-arrow {
+  position: absolute;
+  bottom: -14px;
+  width: 62px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background-color: #f4f4f4;
+}
+
+.header .div-block {
+  min-height: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px 0px rgba(79, 79, 79, 0.3);
+}
+
+.header .brand-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.header .brand-bar .company-logo {
+  margin-left: 2px;
+}
+
+.header .brand-bar .partners-logo {
+  margin-top: -13px;
+}
+
+.header .brand-bar .partners-logo a:nth-child(1) {
+  padding: 0 18px;
+}
+
+.nav-bar {
+  background-color: #ff7500;
+}
+
+.nav-bar .container {
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid #ffb445;
+  border-right: 1px solid #ffb445;
+}
+
+.nav-bar .nav-list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar .nav-list .list-item {
+  list-style-type: none;
+  position: relative;
+}
+
+.nav-bar .nav-list .list-item a {
+  font-family: "Helvetica";
+  font-size: 14px;
+  line-height: 1.567;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 14px;
+  border-right: 1px solid #ffb445;
+  text-shadow: 0px 1px 0px rgba(197, 80, 66, 0.75);
+}
+
+.nav-bar .search-bar {
+  display: flex;
+  align-items: center;
+  padding-right: 19px;
+  max-width: 245px;
+}
+
+.nav-bar .search-bar input {
+  border: none;
+  outline: none;
+  padding: 7px 14px;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.nav-bar .search-bar input::placeholder {
+  font-size: 14px;
+  font-weight: oblique;
+  font-style: italic;
+  color: #9d9d9d;
+}
+
+.nav-bar .search-bar button {
+  margin-left: 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-bar .nav-list .list-item:hover .submenu{
+  display: block;
+}
+
+.nav-bar .nav-list .list-item:hover{
+  background-color: #ff9133;
+}
+
+.nav-bar .nav-list .list-item .submenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  background-color: #3d4e5a;
+  min-width: 300px;
+  padding: 12px 0;
+}
+
+.nav-bar .nav-list .list-item .submenu li a {
+  font-size: 11px;
+  font-family: "Helvetica";
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 2.333;
+  text-shadow: none;
+  border: none;
+  padding: 4px 15px 4px 20px;
+}
+
+.nav-bar .nav-list .list-item .submenu li:hover a{
+  color: #ff9133;
 }
