@@ -146,6 +146,7 @@ body {
   line-height: 12px;
   font-weight: 400;
   color: #fff;
+  margin: 0 6px;
 }
 
 .top-bar .right-col a .top-arrow {
@@ -154,8 +155,7 @@ body {
   width: 62px;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .header {
@@ -168,12 +168,15 @@ body {
   box-shadow: 0px 1px 3px 0px rgba(79, 79, 79, 0.3);
 }
 
+.header .brand-bar {
+  padding-block-start: 14px;
+  padding-block-end: 12px;
+}
+
 .header .brand-bar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 14px;
-  padding-bottom: 12px;
 }
 
 .header .brand-bar .company-logo {
@@ -195,8 +198,6 @@ body {
 .nav-bar .container {
   display: flex;
   justify-content: space-between;
-  border-left: 1px solid #ffb445;
-  border-right: 1px solid #ffb445;
 }
 
 .nav-bar .nav-list {
@@ -209,6 +210,7 @@ body {
 .nav-bar .nav-list .list-item {
   list-style-type: none;
   position: relative;
+  border-inline: 1px solid #ffb445;
 }
 
 .nav-bar .nav-list .list-item a {
@@ -221,7 +223,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   padding: 16px 14px;
-  border-right: 1px solid #ffb445;
   text-shadow: 0px 1px 0px rgba(197, 80, 66, 0.75);
 }
 
@@ -230,6 +231,7 @@ body {
   align-items: center;
   padding-right: 19px;
   max-width: 245px;
+  border-inline-end: 1px solid #ffb445;
 }
 
 .nav-bar .search-bar input {
@@ -255,21 +257,20 @@ body {
   cursor: pointer;
 }
 
-.nav-bar .nav-list .list-item:hover .submenu{
-  display: block;
-}
-
-.nav-bar .nav-list .list-item:hover{
+.nav-bar .nav-list .list-item:hover {
   background-color: #ff9133;
 }
 
 .nav-bar .nav-list .list-item .submenu {
-  display: none;
   position: absolute;
   list-style-type: none;
   background-color: #3d4e5a;
   min-width: 300px;
   padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  z-index: 1;
 }
 
 .nav-bar .nav-list .list-item .submenu li a {
@@ -283,11 +284,16 @@ body {
   padding: 4px 15px 4px 20px;
 }
 
-.nav-bar .nav-list .list-item .submenu li:hover a{
+.nav-bar .nav-list .list-item .submenu li:hover a {
   color: #ff9133;
 }
 
-.hero-banner{
+.nav-bar .nav-list .list-item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-banner {
   background-color: #333333;
   background: url(../img/banner.jpg) no-repeat center center;
   background-size: cover;
@@ -295,45 +301,195 @@ body {
   padding: 126px 0;
 }
 
-.hero-banner .container{
+.hero-banner .container {
   display: flex;
   align-items: center;
   padding-left: 103px;
 }
 
-.hero-content{
+.hero-content {
   font-family: "HelveticaNeue";
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
 }
 
-.hero-content .first-txt{
+.hero-content .first-txt {
   font-size: 22px;
   letter-spacing: -1.4px;
   color: #fd7605;
 }
 
-.hero-content .first-txt span{
+.hero-content .first-txt span {
   color: #3d4e5a;
 }
 
-.hero-content .second-txt{
+.hero-content .second-txt {
   color: #3d4e5a;
   font-size: 34px;
   line-height: 30px;
 }
 
-.hero-content .second-txt span{
+.hero-content .second-txt span {
   color: #fd7605;
+  letter-spacing: -1px;
 }
 
-.hero-content .third-txt{
+.hero-content .third-txt {
   font-size: 34px;
   color: #fd7605;
+  margin-left: 13px;
+  letter-spacing: -1px;
 }
 
-.hero-content .third-txt span{
+.hero-content .third-txt span {
+  position: relative;
+  top: -7px;
+  color: #3d4e5a;
   font-weight: 400;
   font-size: 22px;
+}
+
+.overflow-menus {
+  position: relative;
+  top: -126px;
+}
+
+.overflow-menus .container {
+  display: flex;
+  gap: 15px;
+}
+
+.overflow-menus .menus {
+  width: 33.33%;
+  position: relative;
+  background: #ff7500;
+  padding-block-start: 30px;
+  padding-block-end: 8px;
+  padding-inline: 15px;
+  border-block-end: 4px solid #f15a22;
+  box-shadow: 0px 0px 18px 0px rgba(182, 95, 12, 0.34);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overflow-menus .menus:hover .menu-content{
+  transform: translateY(0);
+}
+
+.overflow-menus .menus .menu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overflow-menus .menus .menu-box img {
+  margin-block-end: 10px;
+}
+
+.overflow-menus .menus .menu-box h3 {
+  font-family: "Titillium Web", sans-serif;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.overflow-menus .menus .menu-box h3 span {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.overflow-menus .menus .menu-content {
+  position: absolute;
+  background: #5e5d5d;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-120%);
+  transition: 0.3s all;
+}
+
+.overflow-menus .menus .menu-content img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.overflow-menus .menus .menu-content .content-info{
+  z-index: 2;
+  color: #fff;
+}
+
+.overflow-menus .menus .menu-content .content-info{
+  text-align: center;
+}
+
+.overflow-menus .menus .menu-content .content-info p{
+  font-family: "HelveticaNeue";
+  font-size: 20px;
+  color: rgb(244, 244, 244);
+  line-height: 0.879;
+  text-transform: capitalize;
+}
+
+.overflow-menus .menus .menu-content .content-info p{
+  margin-bottom: 16px;
+}
+
+.overflow-menus .menus .menu-content .content-info a{
+  padding: 3px 12px;
+font-size: 12px;
+font-family: "Helvetica";
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+line-height: 0.43;
+border: 1px solid rgb(255, 255, 255);
+background-color: rgb(255, 117, 0);
+transition: 0.3s all;
+}
+
+.overflow-menus .menus .menu-content .content-info a:hover{
+  background-color: rgb(167, 78, 0);
+}
+
+.Tramites{
+  background: #ffffff;
+}
+
+.Tramites .container{
+  display: flex;
+}
+
+.Tramites .container .tramites-cards{
+  flex: 1;
+  width: 70%;
+}
+
+.Tramites .container .aside{
+  width: auto;
+}
+
+.tarmites-cards .card .card-img{
+  position: relative;
+  max-width: 30%;
+}
+.tarmites-cards .card .card-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tarmites-cards .card .card-img:after{
+  position: absolute;
+  content: url(../img/logo_icon.svg);
+  inset-block: 0;
+  right: 0;
 }
