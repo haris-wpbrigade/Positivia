@@ -612,11 +612,45 @@ body {
   opacity: 0.8;
 }
 
-.aside-box .prim-txt{
+.aside-box .prim-txt {
   font-size: 11px;
   font-weight: 700;
   text-align: center;
   background-color: #636363;
   color: #fff;
   padding-block: 2px;
+}
+
+.aside-box .aside-form {
+  padding: 10px 15px;
+}
+
+.aside-box .aside-form label {
+  font-size: 14px;
+  color: #686868;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.aside-box .aside-form select {
+  padding: 5px;
+  border: 1px solid rgb(215, 213, 213);
+  margin-bottom: 10px;
+}
+
+.aside-box .aside-form button {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgb(248, 126, 39);
+  border: none;
+  outline: none;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.aside-box .aside-form button:hover {
+  background-color: rgb(216, 88, 19);
 }
