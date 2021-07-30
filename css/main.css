@@ -214,7 +214,7 @@ body {
 }
 
 .nav-bar .nav-list .list-item a {
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 1.567;
   color: #fff;
@@ -275,7 +275,7 @@ body {
 
 .nav-bar .nav-list .list-item .submenu li a {
   font-size: 11px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   color: #ffffff;
   font-weight: bold;
   line-height: 2.333;
@@ -308,7 +308,7 @@ body {
 }
 
 .hero-content {
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeue", sans-serif;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
@@ -435,7 +435,7 @@ body {
 }
 
 .overflow-menus .menus .menu-content .content-info p {
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeue", sans-serif;
   font-size: 20px;
   color: rgb(244, 244, 244);
   line-height: 0.879;
@@ -449,7 +449,7 @@ body {
 .overflow-menus .menus .menu-content .content-info a {
   padding: 3px 12px;
   font-size: 12px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 0.43;
@@ -487,7 +487,7 @@ body {
 
 .primary-content .card {
   width: 33.33%;
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeue", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -571,6 +571,11 @@ body {
   color: rgb(255, 122, 25);
   line-height: 1.399;
   font-weight: 400;
+  transition: 0.3s all;
+}
+
+.primary-content .card a:hover {
+  text-decoration: underline;
 }
 
 .aside-box {
@@ -804,7 +809,7 @@ body {
 
 .about .about-content h4 {
   font-size: 14px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   color: rgb(253, 118, 5);
   font-weight: 700;
   line-height: 0.94;
@@ -815,14 +820,14 @@ body {
 
 .about .about-content p {
   font-size: 13px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   color: rgb(69, 69, 69);
   line-height: 1.166;
 }
 
 .about .about-content .CTA-btn {
   font-size: 16px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   background-color: rgb(248, 126, 39);
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -886,15 +891,22 @@ body {
   margin-bottom: 10px;
 }
 
+.aside-newsletter .newsletter-form input[type="email"]:valid {
+  border-color: green;
+}
+.aside-newsletter .newsletter-form input[type="email"]:invalid {
+  border-color: red;
+}
+
 .aside-newsletter .newsletter-form input::placeholder {
   font-size: 14px;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   color: rgb(104, 104, 104);
   line-height: 2.244;
 }
 
 .aside-newsletter .newsletter-form button {
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   background-color: rgb(248, 126, 39);
   font-size: 16px;
   color: rgb(255, 255, 255);
@@ -955,12 +967,16 @@ body {
   padding-block: 22px;
 }
 
-.aside-events .event-form input[type="date"]{
+.aside-events .event-form input[type="date"] {
   position: relative;
   width: 80%;
+  color: #686868;
+  padding-inline-start: 6px;
 }
 
-.aside-events .event-form input[type="date"]::-webkit-calendar-picker-indicator {
+.aside-events
+  .event-form
+  input[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
   background: none;
   z-index: 1;
@@ -971,4 +987,172 @@ input[type="date"]:before {
   content: url(../img/calendar.jpg);
   position: absolute;
   right: 6px;
+}
+
+.contact-section {
+  background-color: #3d4e5a;
+}
+
+.contact-section .container {
+  display: flex;
+}
+
+.contact-section .contact-features {
+  flex: 1;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 10px;
+  align-content: flex-start;
+}
+
+.contact-section .contact-content {
+  position: relative;
+  min-width: 321px;
+  width: 321px;
+  padding-block-start: 20px;
+  padding-block-end: 100px;
+  margin-inline-start: 6px;
+  border-inline-start: 1px solid white;
+}
+
+.contact-section .contact-features .feature-box {
+  position: relative;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.contact-section .contact-features .feature-box:nth-child(even) {
+  background-color: rgb(61, 78, 90);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.34);
+}
+
+.contact-section .contact-features .feature-box img {
+  width: 84px;
+  margin-inline: auto;
+  margin-bottom: 16px;
+}
+.contact-section .contact-features .feature-box h5 {
+  font-size: 18px;
+  font-family: "HelveticaNeue", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.226;
+  font-weight: 400;
+}
+
+.contact-section .contact-features .feature-box h5 span {
+  font-weight: 700;
+}
+
+.prim-clr {
+  color: #f87e27;
+}
+
+.contact-content .item-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-block: 15px 10px;
+  padding-inline-start: 15px;
+}
+
+.contact-content .item-box .item-img {
+  min-width: 53px;
+}
+
+.contact-content .item-box .item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content .item-box .item-info .bold-txt {
+  font-size: 19px;
+  font-family: "Helvetica", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  line-height: 0.936;
+  margin-bottom: 7px;
+}
+
+.contact-content .item-box .item-info .lit-txt {
+  font-size: 12px;
+  font-family: "Helvetica", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 0.936;
+  margin-bottom: 6px;
+}
+
+.contact-content .item-box .item-info .bold-numb {
+  position: relative;
+  font-size: 28px;
+  font-family: "Helvetica", sans-serif;
+  color: rgb(248, 126, 39);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.647;
+  margin-bottom: 12px;
+}
+
+.contact-content .item-box .item-info .email-txt {
+  position: relative;
+  font-size: 12px;
+  font-family: "Helvetica", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 1.442;
+  display: inline-flex;
+}
+
+.contact-content .item-box .item-info .email-txt img {
+  margin-right: 5px;
+}
+
+.sponsors {
+  padding-block: 18px;
+}
+
+.sponsors .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  background-color: #fd7605;
+  padding-block: 36px;
+}
+
+.footer .container {
+  display: flex;
+}
+
+.footer .footer-links .primary-links,
+.footer .footer-links .secondary-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer .footer-links .primary-links{
+  margin-bottom: 12px;
+}
+
+.footer .footer-links .primary-links li a,
+.footer .footer-links .secondary-links li {
+  font-size: 11px;
+  font-family: "HelveticaNeue", sans-serif;
+  color: rgb(244, 244, 244);
+  line-height: 1.172;
+  padding-inline: 10px;
+  transition: 0.3s all;
+}
+
+.footer .footer-links .primary-links li:hover{
+  font-weight: 600;
 }
