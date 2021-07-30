@@ -219,7 +219,7 @@
 
     <div class="Services">
       <div class="container">
-        <div class="services-cards">
+        <div class="primary-content">
           <div class="card">
             <h4>Servicio en línea</h4>
             <div class="card-img"><img src="img/slide_1.jpg" alt="slide_1"></div>
@@ -239,7 +239,7 @@
             <a href="#">+ ver otros Servicios</a>
           </div>
         </div>
-        <div class="aside">
+        <div class="primary-aside">
           <div class="aside-box">
             <div class="CTA-btns">
               <button>Red Asistencial</button>
@@ -270,9 +270,97 @@
       </div>
     </div>
 
+    <div class="main-content">
+      <div class="container">
+        <div class="secondary-content">
+          <div class="about">
+            <div class="about-slider">
+              <div class="slider-content">
+                <div class="indicators">
+                  <img src="img/hero-slider-leftt-arrow.png" alt="left arrow" class="prev-btn">
+                  <img src="img/hero-slider-right-arrow.png" alt="right arrow" class="next-btn">
+                </div>
+                <div class="slider-Images">
+                  <div class="slider-img">
+                    <img src="img/smily_girl.jpg" alt="smily_girl">
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/smily_girl.jpg" alt="smily_girl">
+                  </div>
+                  <div class="slider-img">
+                    <img src="img/smily_girl.jpg" alt="smily_girl">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-content">
+              <h3>noticias</h3>
+              <h4>INFORMACIÓN IMPORTANTE PARA PENSIONADOS ARL</h4>
+              <p>De 3.194 personas que han sido notificadas para la realización de una valoración médica para verificar el estado de invalidez, 1.867 pensionados aún no acuden a esta citación, lo que puede generar la suspensión en el pago de su mesada pensional.</p>
+              <a href="#" class="CTA-btn">ver mÁS noticias</a>
+            </div>
+          </div>
+          <div class="first-banner"></div>
+          <div class="banner-slider">
+            <div class="slider-img">
+              <img src="img/banner_slider.jpg" alt="banner-slider">
+            </div>
+            <div class="slider-img">
+              <img src="img/banner_slider.jpg" alt="banner-slider">
+            </div>
+            <div class="slider-img">
+              <img src="img/banner_slider.jpg" alt="banner-slider">
+            </div>
+          </div>
+          <div class="second-banner"></div>
+        </div>
+        <div class="secondary-aside">
+          <div class="aside-Img">
+            <img src="img/chat.jpg" alt="chat">
+          </div>
+          <div class="aside-Img">
+            <img src="img/ads.jpg" alt="ads">
+          </div>
+          <div class="aside-Img">
+            <img src="img/ads.jpg" alt="ads">
+          </div>
+          <div class="aside-newsletter">
+            <h4>NewsLetter</h4>
+            <form class="newsletter-form">
+              <input type="email" name="email" placeholder="E-mail">
+              <button type="submit">enviar</button>
+            </form>
+          </div>
+          <div class="aside-Img">
+            <img src="img/twitter_post.jpg" alt="twitter_post">
+          </div>
+          <div class="aside-events">
+            <div class="CTA-btns">
+              <button>evento</button>
+              <button>capacitacion</button>
+            </div>
+            <form class="event-form">
+              <input type="date" id="start" name="trip-start"
+                value="2017-06-21"
+                min="2018-01-01" max="2018-12-31">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script>
+      $('.about-slider .slider-content .slider-Images').slick({
+        dots:true,
+        prevArrow: $('.about-slider .slider-content .indicators .prev-btn'),
+        nextArrow: $('.about-slider .slider-content .indicators .next-btn'),
+      })
+
+      $('.banner-slider').slick({dots:true})
+    </script>
   </body>
 </html>
