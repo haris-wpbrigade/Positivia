@@ -183,6 +183,10 @@ body {
   align-items: center;
 }
 
+.header .brand-bar .toggleBtn {
+  display: none;
+}
+
 .header .brand-bar .company-logo {
   margin-left: 2px;
 }
@@ -1008,6 +1012,7 @@ input[type="date"]:before {
 
 .contact-section {
   position: relative;
+  overflow: hidden;
   background-color: #3d4e5a;
 }
 
@@ -1152,6 +1157,7 @@ input[type="date"]:before {
 .footer {
   background-color: #fd7605;
   padding-block: 36px;
+  overflow: hidden;
 }
 
 .footer .container {
@@ -1245,29 +1251,38 @@ input[type="date"]:before {
 
 /* mobile layout */
 @media (max-width: 767px) {
-  .top-bar .container {
-    padding: 8px 15px;
-  }
-
-  .top-bar .left-col,
-  .top-bar .right-col,
-  .top-bar .right-col a {
-    justify-content: center;
-  }
-
-  .header .brand-bar .partners-logo {
+  .header .brand-bar .partners-logo,
+  .top-bar,
+  .header .div-block {
     display: none;
+  }
+
+  .header .brand-bar .toggleBtn {
+    display: block;
+  }
+
+  .header .brand-bar .toggleBtn img{
+    width: 22px;
+  }
+
+  .company-logo img {
+    width: 128px;
   }
 
   .nav-bar {
-    display: none;
     position: absolute;
     width: 100%;
     background-color: #ff7500;
     height: 100vh;
     z-index: 999;
     padding-block: 10px;
+    transform: translateY(-150%);
   }
+
+  .nav-bar.active{
+    transform: translateY(0);
+    transition: 0.3s ease-in-out;
+  } 
 
   .nav-bar .container {
     display: flex;
@@ -1323,6 +1338,10 @@ input[type="date"]:before {
     flex-direction: column;
   }
 
+  .hero-banner .container {
+    padding-left: 10px;
+  }
+
   .primary-content {
     padding-inline: 0;
   }
@@ -1341,15 +1360,30 @@ input[type="date"]:before {
     width: 50%;
   }
 
-  .contact-section .contact-features .feature-box:nth-child(even){
+  .contact-section .contact-features .feature-box:nth-child(even) {
     box-shadow: none;
     background-color: transparent;
   }
 
   .contact-section .contact-features .feature-box:nth-child(2),
   .contact-section .contact-features .feature-box:nth-child(3),
-  .contact-section .contact-features .feature-box:nth-child(6){
+  .contact-section .contact-features .feature-box:nth-child(6) {
     box-shadow: 0px 0px 18px 0px rgb(0 0 0 / 34%);
     background-color: rgb(61, 78, 90);
+  }
+
+  .contact-section .contact-content{
+    border: none;
+    margin: 0;
+  }
+
+  .contact-content .item-box{
+    display: block;
+    padding-inline-start: 0;
+  }
+
+  .contact-content .item-box .item-img{
+    min-height: 53px;
+    min-width: 100%;
   }
 }
