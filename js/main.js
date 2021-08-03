@@ -1,10 +1,17 @@
 const NavBar = document.querySelector(".nav-bar");
 const ToggleBtn = document.querySelector(".toggleBtn");
+const ToggleIMG = document.querySelector(".toggleBtn img");
 
 ToggleBtn.addEventListener("click", () => {
-  NavBar.classList.toggle("active");
-  document.body.style.overflow =
-    document.body.style.overflow === "hidden" ? "hidden scroll" : "hidden";
+  if(ToggleIMG.src.match('../img/burger-icon.png')){
+    NavBar.classList.add("active");
+    ToggleIMG.src = "../img/close-button.png"
+    document.body.style.overflow = 'hidden'
+  } else {
+    NavBar.classList.remove("active");
+    ToggleIMG.src = "../img/burger-icon.png"
+    document.body.style.overflow = 'hidden scroll'
+  }
 });
 
 const NavLinks = document.querySelectorAll(".Toggle-Submenu");

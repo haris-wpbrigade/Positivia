@@ -594,7 +594,6 @@ body {
 .aside-box .CTA-btns {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .aside-box .CTA-btns button {
@@ -603,6 +602,7 @@ body {
   outline: none;
   font-size: 11px;
   padding-block: 9px;
+  padding-inline: 5px;
   background: #d9d7d7;
   color: #686868;
   font-weight: 700;
@@ -635,20 +635,20 @@ body {
   padding: 10px 24px 10px 15px;
 }
 
-.aside-box .formOne{
+.aside-box .formOne {
   display: flex;
 }
 
-.aside-box .formTwo{
+.aside-box .formTwo {
   display: none;
 }
 
-#redBtn.active{
+#redBtn.active {
   background-color: #fff;
   color: #333333;
 }
 
-#PuntoBtn.active{
+#PuntoBtn.active {
   background-color: #fff;
   color: #333333;
 }
@@ -976,7 +976,6 @@ body {
 .aside-events .CTA-btns {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .aside-events .CTA-btns button {
@@ -985,6 +984,7 @@ body {
   outline: none;
   font-size: 11px;
   padding-block: 6px;
+  padding-inline: 5px;
   background: #d9d7d7;
   color: #686868;
   font-size: 12px;
@@ -1293,7 +1293,16 @@ input[type="date"]:before {
     display: none;
   }
 
+  .nav-bar .nav-list{
+    padding-top: 10px;
+  }
+
+  .nav-bar .nav-list .list-item:hover {
+    width: 100%;
+  }
+
   .nav-bar .nav-list .list-item:hover .submenu {
+    height: 0;
     opacity: 0;
     visibility: hidden;
   }
@@ -1311,7 +1320,7 @@ input[type="date"]:before {
   }
 
   .header .brand-bar .toggleBtn img {
-    width: 22px;
+    width: 25px;
   }
 
   .company-logo img {
@@ -1346,10 +1355,12 @@ input[type="date"]:before {
 
   .nav-bar .nav-list .list-item {
     border: none;
+    width: 100%;
   }
 
   .nav-bar .nav-list .list-item a {
     font-size: 14px;
+    justify-content: space-between;
   }
 
   .nav-bar .search-bar {
@@ -1383,9 +1394,7 @@ input[type="date"]:before {
   .main-content .container,
   .main-content .secondary-content .about,
   .contact-section .container,
-  .footer .container,
-  .footer .footer-links .primary-links,
-  .footer .footer-links .secondary-links {
+  .footer .container {
     flex-direction: column;
   }
 
@@ -1473,7 +1482,7 @@ input[type="date"]:before {
   }
 }
 
-@media (max-width: 296px) {
+@media (max-width: 492px) {
   .contact-section .contact-features .feature-box {
     width: 100%;
   }
@@ -1484,5 +1493,10 @@ input[type="date"]:before {
   .contact-section .contact-features .feature-box:nth-child(odd) {
     box-shadow: none;
     background-color: transparent;
+  }
+  
+  .footer .footer-links .primary-links,
+  .footer .footer-links .secondary-links{
+    flex-direction: column;
   }
 }
