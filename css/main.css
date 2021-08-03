@@ -635,6 +635,24 @@ body {
   padding: 10px 24px 10px 15px;
 }
 
+.aside-box .formOne{
+  display: flex;
+}
+
+.aside-box .formTwo{
+  display: none;
+}
+
+#redBtn.active{
+  background-color: #fff;
+  color: #333333;
+}
+
+#PuntoBtn.active{
+  background-color: #fff;
+  color: #333333;
+}
+
 .aside-box .aside-form label {
   font-size: 14px;
   color: #686868;
@@ -642,15 +660,19 @@ body {
   margin-bottom: 5px;
 }
 
-.aside-box .aside-form select {
+.aside-box .aside-form select,
+.aside-box .aside-form input {
   padding: 5px;
   border: 1px solid rgb(215, 213, 213);
   margin-bottom: 10px;
+  outline: none;
+}
+
+.aside-box .aside-form select {
   appearance: none;
   background-image: url(../img/arrow.svg);
   background-position: 96% center;
   background-repeat: no-repeat;
-  outline: none;
 }
 
 .aside-box .aside-form select:nth-child(3),
@@ -1232,8 +1254,6 @@ input[type="date"]:before {
   }
 
   .aside-box .aside-form {
-    display: flex;
-    flex-direction: column;
     padding: 10px 15px;
   }
 
@@ -1257,8 +1277,8 @@ input[type="date"]:before {
   }
 }
 
-@media (max-width: 791px){
-  .nav-bar .search-bar{
+@media (max-width: 791px) {
+  .nav-bar .search-bar {
     max-width: 177px;
   }
 }
@@ -1353,7 +1373,7 @@ input[type="date"]:before {
   .contact-section .contact-content {
     min-width: 100%;
     width: 100%;
-    margin-top: 0;
+    margin-top: 15px;
   }
 
   .top-bar .container,
@@ -1370,7 +1390,8 @@ input[type="date"]:before {
   }
 
   .hero-banner .container {
-    padding-left: 10px;
+    padding-left: 0;
+    justify-content: center;
   }
 
   .overflow-menus .menus {
@@ -1396,6 +1417,10 @@ input[type="date"]:before {
   .main-content .secondary-content {
     padding-right: 0;
     width: 100%;
+  }
+
+  .about .about-content .CTA-btn {
+    padding: 5px 15px;
   }
 
   .primary-content .card:nth-child(even) {
@@ -1445,5 +1470,19 @@ input[type="date"]:before {
   }
   .footer .footer-links {
     margin-block-end: 10px;
+  }
+}
+
+@media (max-width: 296px) {
+  .contact-section .contact-features .feature-box {
+    width: 100%;
+  }
+  .contact-section .contact-features .feature-box:nth-child(even) {
+    box-shadow: 0px 0px 18px 0px rgb(0 0 0 / 34%);
+    background-color: rgb(61, 78, 90);
+  }
+  .contact-section .contact-features .feature-box:nth-child(odd) {
+    box-shadow: none;
+    background-color: transparent;
   }
 }

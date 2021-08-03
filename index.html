@@ -260,11 +260,11 @@
         <div class="primary-aside">
           <div class="aside-box">
             <div class="CTA-btns">
-              <button>Red Asistencial</button>
-              <button>Punto de Atencion</button>
+              <button id="redBtn">Red Asistencial</button>
+              <button id="PuntoBtn">Punto de Atencion</button>
             </div>
             <div class="prim-txt">Consulta Rapidamente tu red asistencial</div>
-            <form class="aside-form">
+            <form class="aside-form formOne">
               <label for="departmento">departmento:</label>
               <select name="departmento" id="departmento">
                 <option value="choose option">choose option</option>
@@ -282,6 +282,23 @@
                 <option value="choose option">choose option</option>
               </select>
               <button type="submit">buscar</button>
+            </form>
+            <form class="aside-form formTwo">
+              <label for="name">name:</label>
+              <input type="text" placeholder="enter name" id="name" />
+              <label for="email">email:</label>
+              <input type="email" placeholder="enter email" id="email" />
+              <label for="choosegender">choose Gender:</label>
+              <select name="choosegender" id="choosegender">
+                  <option value="male">male</option>
+                  <option value="female">female</option>
+                  <option value="other">other</option>
+              </select>
+              <label for="choosecountry">choose country:</label>
+              <select name="choosecountry" id="choosecountry">
+                  <option value="choose option">choose country</option>
+              </select>
+              <button type="submit">submit form</button>
             </form>
           </div>
         </div>
@@ -371,8 +388,8 @@
           </div>
           <div class="aside-events">
             <div class="CTA-btns">
-              <button>evento</button>
-              <button>capacitacion</button>
+              <button id="EventBtnOne">evento</button>
+              <button id="EventBtnTwo">capacitacion</button>
             </div>
             <form class="event-form">
               <input
